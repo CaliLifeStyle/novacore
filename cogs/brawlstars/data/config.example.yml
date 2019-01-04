@@ -1,43 +1,27 @@
 servers:
-  - name: Nova Esports
-    id: 218534373169954816
+  - name: NovaCore
+    id: 530728024383946763
     clubs:
-      - name: Reddit Alpha
-        tag: LQQ
+      - name: Nova Esports
+        tag: Q2LUQ0P
         roles:
-          - BS-Alpha
-      - name: Reddit Bravo
-        tag: 282UC998
-        roles:
-          - BS-Bravo
-      - name: Reddit Charlie
-        tag: 29GV920P
-        roles:
-          - BS-Charlie
+          - Esports
     everyone_roles:
-      - Brawl-Stars
+      - Nova
     member_roles:
-      - BS-Member
+      - Esports
     visitor_roles:
       - Visitor
-  - name: SML
-    id: 275395656955330560
+  - name: DEX
+    id: 347727875266576395
     clubs:
-      - name: Reddit Alpha
-        tag: LQQ
+      - name: Nova Esports
+        tag: Q2LUQ0P
         roles:
-          - BS-Alpha
-      - name: Reddit Bravo
-        tag: 282UC998
-        roles:
-          - BS-Bravo
-      - name: Reddit Charlie
-          tag: 29GV920P
-          roles:
-            - BS-Charlie
+          - Esports
     everyone_roles:
-      - Brawl-Stars
+      - Nova
     member_roles:
-      - BS-Member
+      - Esports
     visitor_roles:
       - Visitor
