@@ -1,0 +1,11 @@
+{
+	"AUTHOR": "DEX & GHOST",
+	"SHORT": "Brawl Stars band data",
+	"DESCRIPTION": "Access Brawl Stars bands with API by Harmiox.",
+	"DISABLED": false,
+	"NAME": "BSData",
+	"REQUIREMENTS": ["async_timeout", "aiohttp", "asyncio"],
+	"TAGS": ["bs", "brawlstars", "brawl-stars", "clan", "management" "utility"],
+	"INSTALL_MSG": "Thanks for installing. If you need help PLEASE YELLLLL"
+
+}
