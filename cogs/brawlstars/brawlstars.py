@@ -46,7 +46,7 @@ CACHE_PATH = os.path.join(PATH, "cache")
 CACHE_PLAYER_PATH = os.path.join(CACHE_PATH, "player")
 CACHE_CLUB_PATH = os.path.join(CACHE_PATH, "club")
 
-MANAGE_ROLE_ROLES = ['Bot Commander']
+MANAGE_ROLE_ROLES = ['BotAdmin']
 
 from box import Box
 
