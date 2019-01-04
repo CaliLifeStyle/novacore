@@ -1,0 +1,10 @@
+{
+	"AUTHOR": "DEX & GHOST",
+	"SHORT": "BrawlStars",
+	"DESCRIPTION": "Brawl Stars profile and clubs",
+	"DISABLED": false,
+	"NAME": "BrawlStars",
+	"REQUIREMENTS": ["python-box", "stringcase", "pyyaml", "aiofiles"],
+	"TAGS": ["brawlstars"],
+	"INSTALL_MSG": "Thanks for installing. If you need help, please YELL"
+}
