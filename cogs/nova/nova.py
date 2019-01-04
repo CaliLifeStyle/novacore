@@ -47,101 +47,21 @@ from cogs.utils.dataIO import dataIO
 logger = logging.getLogger(__name__)
 
 CHANGECLAN_ROLES = ["Leader", "Co-Leader", "Elder", "High Elder", "Member"]
-BS_CHANGECLAN_ROLES = ["Member", "Brawl-Stars"]
+BS_CHANGECLAN_ROLES = ["Nova"]
 DISALLOWED_ROLES = ["SUPERMOD", "MOD", "AlphaBot"]
 MEMBER_DEFAULT_ROLES = ["Member", "Tourney" "Content"]
 CLANS = [
     "Alpha", "Bravo", "Charlie", "Delta",
     "Echo", "Foxtrot", "Golf", "Hotel", "Zen", "YOLO", "Trade"]
 BS_CLANS = [
-    "Nova Esports", "Nova Prime", "Nova Aries"]
-BS_CLANS_PREFIX = 'BS-'
+    "Nova Esports"]
+BS_CLANS_PREFIX = 'Nova'
 BOTCOMMANDER_ROLE = ["BotAdmin"]
 HE_BOTCOMMANDER_ROLES = ["Bot Commander", "High-Elder"]
 COMPETITIVE_CAPTAIN_ROLES = ["Competitive-Captain", "Bot Commander"]
 COMPETITIVE_TEAM_ROLES = [
     "CRL", "RPL-NA", "RPL-EU", "RPL-APAC", "MLG",
     "ClashWars", "CRL-Elite", "CRL-Legends", "CRL-Rockets"]
-# CLAN_PERMISSION = {
-#     '9PJ82CRC': {
-#         'tag': '9PJ82CRC',
-#         'role': 'Alpha',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9UQJUJC9': {
-#         'tag': '9UQJUJC9',
-#         'role': 'Bravo',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9G99JQPL': {
-#         'tag': '9G99JQPL',
-#         'role': 'Charlie',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9G8VYGL0': {
-#         'tag': '9G8VYGL0',
-#         'role': 'Delta',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9CJ0L9RG': {
-#         'tag': '9CJ0L9RG',
-#         'role': 'Echo',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9UQC2P0V': {
-#         'tag': '9UQC2P0V',
-#         'role': 'Foxtrot',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9UG2R2LQ': {
-#         'tag': '9UG2R2LQ',
-#         'role': 'Golf',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9Y9VR2JR': {
-#         'tag': '9Y9VR2JR',
-#         'role': 'Hotel',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9R8GUC0L': {
-#         'tag': '9R8GUC0L',
-#         'role': 'YOLO',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '9LPVG9UC': {
-#         'tag': '9LPVG9UC',
-#         'role': 'Zen',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     'PYVQL8YP': {
-#         'tag': 'PYVQL8YP',
-#         'role': 'Trade',
-#         'assign_role': True,
-#         'member': True
-#     },
-#     '22LR8JJ2': {
-#         'tag': '22LR8JJ2',
-#         'role': 'Mini',
-#         'assign_role': True,
-#         'member': False
-#     },
-#     '2Q09VJC8': {
-#         'tag': '2Q09VJC8',
-#         'role': 'Mini2',
-#         'assign_role': True,
-#         'member': False
-#     },
-# }
 
 CLAN_PERMISSION = {
     '9R8G9290': {
@@ -190,33 +110,15 @@ CLAN_PERMISSION = {
 
 BAND_PERMISSION = {
     'LQQ': {
-        'tag': 'LQQ',
-        'role': 'BS-Alpha',
-        'assign_role': True,
-        'member': False
-    },
-    '82RQLR': {
-        'tag': '82RQLR',
-        'role': 'BS-Bravo',
-        'assign_role': True,
-        'member': False
-    },
-    '98VLYJ': {
-        'tag': '98VLYJ',
-        'role': 'BS-Charlie',
-        'assign_role': True,
-        'member': False
-    },
-    'Q0YG8V': {
-        'tag': 'Q0YG8V',
-        'role': 'BS-Delta',
+        'tag': 'Q2LUQ0P',
+        'role': 'Esports',
         'assign_role': True,
         'member': False
     }
 
 }
 
-PATH = os.path.join("data", "racf")
+PATH = os.path.join("data", "nova")
 JSON = os.path.join(PATH, "settings.json")
 
 CLAN_ROLES = ['Alpha', 'Bravo', 'Charlie', 'Delta', 'Echo', 'Foxtrot', 'Golf', 'Hotel', 'YOLO', 'Zen']
@@ -225,8 +127,8 @@ VISITOR_ROLES = ['Visitor']
 RECRUIT_ROLES = ['{}Recruit'.format(r) for r in CLAN_ROLES]
 RECRUIT_ROLES.append('Recruit')
 
-# FAMILY_SERVER_ID = '218534373169954816' # 100 Thieves Clan Family server
-FAMILY_SERVER_ID = '528327242875535372' # RoyaleAPI Clan Family server
+# FAMILY_SERVER_ID = '530728024383946763' # 100 Thieves Clan Family server
+FAMILY_SERVER_ID = '530728024383946763' 
 
 
 def grouper(n, iterable, fillvalue=None):
@@ -355,7 +257,7 @@ class SCTag:
             ))
 
 
-class RACF:
+class NOVA:
     """Display RACF specifc info.
 
     Note: RACF specific plugin for Red
@@ -364,7 +266,7 @@ class RACF:
     def __init__(self, bot):
         """Constructor."""
         self.bot = bot
-        with open(os.path.join("data", "racf", "config.yaml")) as f:
+        with open(os.path.join("data", "nova", "config.yaml")) as f:
             self.config = Box(yaml.load(f))
         self.settings = dataIO.load_json(JSON)
 
@@ -1743,5 +1645,5 @@ def check_file():
 def setup(bot):
     check_folder()
     check_file()
-    r = RACF(bot)
+    r = NOVA(bot)
     bot.add_cog(r)
