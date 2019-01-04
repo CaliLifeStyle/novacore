@@ -1,0 +1,10 @@
+{
+	"AUTHOR": "DEX & GHOST",
+	"SHORT": "NOVA Audit",
+	"DESCRIPTION": "Nova AUDITS!",
+	"DISABLED": false,
+	"NAME": "NovaAudit",
+	"REQUIREMENTS": ["pyyaml", "tabulate", "unidecode", "crapipy", "humanize", "python-dateutil"],
+	"TAGS": [],
+	"INSTALL_MSG": "Thanks for installing. If you need help, please YELL LOUDLY"
+}
