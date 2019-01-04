@@ -42,13 +42,13 @@ from cogs.utils import checks
 from cogs.utils.chat_formatting import box, inline, pagify, underline
 from cogs.utils.dataIO import dataIO
 
-PATH = os.path.join("data", "racf_audit")
+PATH = os.path.join("data", "nova_audit")
 JSON = os.path.join(PATH, "settings.json")
-PLAYERS = os.path.join("data", "racf_audit", "player_db.json")
+PLAYERS = os.path.join("data", "nova_audit", "player_db.json")
 
-# RACF_SERVER_ID = '218534373169954816'
-RACF_SERVER_ID = '528327242875535372'
-SML_SERVER_ID = '275395656955330560'
+# NovaCORE_SERVER_ID = '530728024383946763'
+NOVA_SERVER_ID = '530728024383946763'
+
 
 
 
@@ -85,12 +85,12 @@ async def check_manage_roles(ctx, bot):
     author = ctx.message.author
     channel = ctx.message.channel
     # For 100T server, only allow command to run if user has the "Bot Comamnder" role
-    if server.id == RACF_SERVER_ID:
-        bc_role = discord.utils.get(server.roles, name="Bot Commander")
+    if server.id == NOVA_SERVER_ID:
+        bc_role = discord.utils.get(server.roles, name="BotAdmin")
         if bc_role not in author.roles:
             await bot.send_message(
                 channel,
-                "Only Bot Commanders on this server can run this command.")
+                "Only BotAdmin on this server can run this command.")
             return False
         else:
             return True
@@ -105,11 +105,11 @@ async def check_manage_roles(ctx, bot):
     return True
 
 
-class RACFAuditException(Exception):
+class NOVAAuditException(Exception):
     pass
 
 
-class CachedClanModels(RACFAuditException):
+class CachedClanModels(NOVAAuditException):
     pass
 
 
